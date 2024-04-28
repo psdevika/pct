@@ -1,7 +1,7 @@
 import mysql.connector as msc
 mydb=msc.connect(host="localhost",
                 user="root",
-                password="Devika4@devuz",
+                password="root",
                 allow_local_infile=True)
 crs=mydb.cursor()
 qry01="CREATE DATABASE if not exists blog"
