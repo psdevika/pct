@@ -41,6 +41,9 @@ crs.execute(qry05)
 qry51="INSERT INTO categories VALUES('maths')"
 crs.execute(qry51)
 
+qry06=("CREATE TABLE IF NOT EXISTS commands(command varchar(20));"
+crs.execute(qry06)
+# insert values to the table
 
 
 mydb.commit()
