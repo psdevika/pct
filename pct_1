@@ -40,9 +40,63 @@ print("User")
 a1=int(input ("Enter your choice"))
 If a1==1:
     print("Admin panel")
-     
+    admin()
 elif a1==2:
    print ("User")
-  
+   user()
 else:
    print ("please enter valid choice")
+
+def admin():
+   a2=int(input("enter the password "))
+   if a2==1234:
+      dashboard ()
+
+def user():
+   a3=int(input("enter the password "))
+   if a3==4321:
+       select ()
+
+def dashboard():
+    print(" what you wanted to manage ")
+    print (" 1. Category \n 2. Profile \n 3.Commands")
+    a4=int(input("enter your choice "))
+    if a4==1:
+       categorymng()
+    elif a4==2:
+       profilemng()
+    elif a4==3:
+       commandmng()
+    else:
+       print(" enter valid choice ")
+ #add a loof that will  break of we enter the choice wrong for 4 times
+
+def select():
+    print("1. create \n 2. read\n 3. Profile ")
+    a5=int(input(" enter your choice "))
+    if a5==1:
+       create()
+    elif a5==2:
+       read()
+    elif a5==3:
+       profile()
+    else:
+       print(" enter valid choice ")
+
+def categorymng():
+    print("you can add or remove any category if you want")
+    print("enter the category you wanted to add ")
+    #query to add new data to the table category")
+    print(" select the category you want to remove ")
+    #query to remove data from the table category")
+
+def profilemng():
+
+def commandmng():
+
+def create():
+
+def read():
+
+def profile():
+
