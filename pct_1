@@ -112,7 +112,8 @@ def commandmng():
 
 def create():
    # table qns_ans
-   # to add blogs
+   # to add blogs 
+   # can update upload or delete owned post
 
 def read():
    # table categories and  qns_ans
@@ -121,3 +122,4 @@ def read():
 def profile():
    # table profile 
    # show id, username, post , comments
+   # option to delete the profile
