@@ -33,3 +33,16 @@ crs.execute(qry40)
 
 mydb.commit()
 crs.close()
+while True:
+print("Enter 1 for logging into Admin panel || Enter 2 for log in as a user")
+print("Admin Panel")
+print("User")
+a1=int(input ("Enter your choice"))
+If a1==1:
+    print("Admin panel")
+     
+elif a1==2:
+   print ("User")
+  
+else:
+   print ("please enter valid choice")
