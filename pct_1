@@ -31,6 +31,18 @@ crs.execute(qry38)
 crs.execute(qry39)
 crs.execute(qry40)
 
+qry04="CREATE TABLE IF NOT EXISTS qns_ans(question varchar(50), answer varchar(25));"
+crs.excute(qry04)
+qry41="INSERT INTO qns_ans VALUES ('Factors of 20','5 4 ')"
+crs.execute(qrt41)
+
+qry05="CREATE TABLE IF NOT EXITS categories (category varchar(20));"
+crs.execute(qry05)
+qry51="INSERT INTO categories VALUES('maths')"
+crs.execute(qry51)
+
+
+
 mydb.commit()
 crs.close()
 while True:
