@@ -45,6 +45,7 @@ crs.execute(qry51)
 
 mydb.commit()
 crs.close()
+
 while True:
 print("Enter 1 for logging into Admin panel || Enter 2 for log in as a user")
 print("Admin Panel")
@@ -98,17 +99,25 @@ def select():
 def categorymng():
     print("you can add or remove any category if you want")
     print("enter the category you wanted to add ")
-    #query to add new data to the table category")
+    #query to add new data to the table categories
     print(" select the category you want to remove ")
-    #query to remove data from the table category")
+    #query to remove data from the table categories
 
 def profilemng():
+   # retrieve data from the tables Profile and qns_ans
+   # can change any datas related to the profile
 
 def commandmng():
+   # retrieve data from the table profile and qns_ans
 
 def create():
+   # table qns_ans
+   # to add blogs
 
 def read():
+   # table categories and  qns_ans
+   # to read blogs
 
 def profile():
-
+   # table profile 
+   # show id, username, post , comments
