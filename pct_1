@@ -34,7 +34,7 @@ crs.execute(qry40)
 qry04="CREATE TABLE IF NOT EXISTS qns_ans(question varchar(50), answer varchar(25));"
 crs.excute(qry04)
 qry41="INSERT INTO qns_ans VALUES ('Factors of 20','5 4 ')"
-crs.execute(qrt41)
+crs.execute(qry41)
 
 qry05="CREATE TABLE IF NOT EXITS categories (category varchar(20));"
 crs.execute(qry05)
@@ -50,79 +50,84 @@ mydb.commit()
 crs.close()
 
 while True:
-print("Enter 1 for logging into Admin panel || Enter 2 for log in as a user")
-print("Admin Panel")
-print("User")
-a1=int(input ("Enter your choice"))
-If a1==1:
-    print("Admin panel")
-    admin()
-elif a1==2:
-   print ("User")
-   user()
-else:
-   print ("please enter valid choice")
+   print("Enter 1 for logging into Admin panel || Enter 2 for log in as a user")
+   print("Admin Panel")
+   print("User")
+   a1=int(input ("Enter your choice"))
+   If a1==1:
+       print("Admin panel")
+       admin()
+   elif a1==2:
+      print ("User")
+      user()
+   else:
+      print ("please enter valid choice")
 
-def admin():
-   a2=int(input("enter the password "))
-   if a2==1234:
-      dashboard ()
+   def admin():
+      a2=int(input("enter the password "))
+      if a2==1234:
+         dashboard ()
 
-def user():
-   a3=int(input("enter the password "))
-   if a3==4321:
-       select ()
+   def user():
+      a3=int(input("enter the password "))
+      if a3==4321:
+          select ()
 
-def dashboard():
-    print(" what you wanted to manage ")
-    print (" 1. Category \n 2. Profile \n 3.Commands")
-    a4=int(input("enter your choice "))
-    if a4==1:
-       categorymng()
-    elif a4==2:
-       profilemng()
-    elif a4==3:
-       commandmng()
-    else:
-       print(" enter valid choice ")
- #add a loof that will  break of we enter the choice wrong for 4 times
+   def dashboard():
+       print(" what you wanted to manage ")
+       print (" 1. Category \n 2. Profile \n 3.Commands")
+       a4=int(input("enter your choice "))
+       if a4==1:
+          categorymng()
+       elif a4==2:
+          profilemng()
+       elif a4==3:
+          commandmng()
+       else:
+          print(" enter valid choice ")
+    #add a loof that will  break of we enter the choice wrong for 4 times
 
-def select():
-    print("1. create \n 2. read\n 3. Profile ")
-    a5=int(input(" enter your choice "))
-    if a5==1:
-       create()
-    elif a5==2:
-       read()
-    elif a5==3:
-       profile()
-    else:
-       print(" enter valid choice ")
+   def select():
+       print("1. create \n 2. read\n 3. Profile ")
+       a5=int(input(" enter your choice "))
+       if a5==1:
+          create()
+       elif a5==2:
+          read()
+       elif a5==3:
+          profile()
+       else:
+          print(" enter valid choice ")
+  
+   def categorymng():
+       print("you can add or remove any category if you want")
+       print("enter the category you wanted to add ")
+       #query to add new data to the table categories
+       print(" select the category you want to remove ")
+       #query to remove data from the table categories
 
-def categorymng():
-    print("you can add or remove any category if you want")
-    print("enter the category you wanted to add ")
-    #query to add new data to the table categories
-    print(" select the category you want to remove ")
-    #query to remove data from the table categories
+   def profilemng():
+      # retrieve data from the tables Profile and qns_ans
+      # can change any datas related to the profile
+      print (" to manage profile")
 
-def profilemng():
-   # retrieve data from the tables Profile and qns_ans
-   # can change any datas related to the profile
+   def commandmng():
+      # retrieve data from the table profile and qns_ans
+      print("command")
 
-def commandmng():
-   # retrieve data from the table profile and qns_ans
+   def create():
+      # table qns_ans
+      # to add blogs 
+      # can update upload or delete owned post
+      print ("to create blogs")
 
-def create():
-   # table qns_ans
-   # to add blogs 
-   # can update upload or delete owned post
+   def read():
+      # table categories and  qns_ans
+      # to read blogs
+      print ("to read blogs")
 
-def read():
-   # table categories and  qns_ans
-   # to read blogs
-
-def profile():
-   # table profile 
-   # show id, username, post , comments
-   # option to delete the profile
+   def profile():
+      # table profile 
+      # show id, username, post , comments
+      # option to delete the profile
+      print("profile")
