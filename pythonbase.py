@@ -97,8 +97,9 @@ def admin():
          a2 = int(input("Enter the password here"))
          if a2 == 1234:
              dashboard()
+         print("password is incorrect")
          num=num+1
-     print("password is incorrect")
+     print(" you have no more chances")       
      hp=input("Go to HOME PAGE")
      if hp=="":
         homepage()
