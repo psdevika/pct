@@ -33,7 +33,7 @@ crs.execute(qry40)
 
 
 
-qry05="CREATE TABLE IF NOT EXISTS qns_ans(id_profile int(10) ,Categories varchar(15) check(categories='MATHS' or categories='PHYSICS' or categories='CHEMISTRY' or categories='HISTORY' or categories='COMPUTER' ),question varchar(50),foreign key(id_profile) references Profile(id_profile));"
+qry05="CREATE TABLE IF NOT EXISTS qns_ans(id_profile int(10) ,Categories varchar(15) check(categories='MATHS' or categories='PHYSICS' or categories='CHEMISTRY' or categories='HISTORY' or categories='COMPUTER' ),question varchar(50) primary key ,foreign key(id_profile) references Profile(id_profile));"
 crs.excute(qry05)
 qry51="INSERT INTO qns_ans VALUES (0001,'MATHS','FACTORS OF 196')"
 qry52="INSERT INTO qns_ans VALUES (0001,'PHYSICS','WORKING PRINCIPLE OF A WASHING MACHINE')"
@@ -76,12 +76,93 @@ crs.execute(qry68)
 crs.execute(qry69)
 crs.execute(qry70)
 
-
-
-
-qry09=("CREATE TABLE IF NOT EXISTS comments(question varchar(50), comment varchar(20));"
+qry09=("CREATE TABLE IF NOT EXISTS comments(question varchar(50), comment varchar(20),foreign key(question) references qns_ans(question)); "
 crs.execute(qry09)
-# insert values to the table
+qry91="INSERT INTO comments VALUES('FACTORS OF 196','1,2,4,14,98')"
+qry92="INSERT INTO comments VALUES('FACTORS OF 196','1,2,4,7,14,28,49,98,196')"
+qry93="INSERT INTO comments VALUES('WORKING PRINCIPLE OF A WASHING MACHINE','CENTRIFUGATION')"
+qry94="INSERT INTO comments VALUES('WORKING PRINCIPLE OF A WASHING MACHINE','DIFFUSION')"
+qry95="INSERT INTO comments VALUES('WHO IS THE FATHER OF COMPUTER','CHARLES')"
+qry96="INSERT INTO comments VALUES('WHO IS THE FATHER OF COMPUTER','CHARLES BABBAGE')"
+qry97="INSERT INTO comments VALUES('SOLUBILITY OF ALCOHOL IN WATER IS DUE TO','HYDROGEN BONDING')"
+qry98="INSERT INTO comments VALUES('SOLUBILITY OF ALCOHOL IN WATER IS DUE TO','OXIDATION')"
+qry99="INSERT INTO comments VALUES('WHO WAS THE FIRST EMPEROR OF THE MAURYA DYNASTY IN INDIA'
+qry100="INSERT INTO comments VALUES('WHO WAS THE FIRST EMPEROR OF THE MAURYA DYNASTY IN INDIA'
+qry101="INSERT INTO comments VALUES('20+(90/2) IS EQUAL TO'
+qry102="INSERT INTO comments VALUES('20+(90/2) IS EQUAL TO'
+qry103="INSERT INTO comments VALUES('WHO IS KNOWN AS THE FATHER OF THE INDIAN CONSTITUTION'
+qry104="INSERT INTO comments VALUES('WHO IS KNOWN AS THE FATHER OF THE INDIAN CONSTITUTION'
+qry105="INSERT INTO comments VALUES('WHAT IS THE FULLFORM OF CPU'
+qry106="INSERT INTO comments VALUES('WHAT IS THE FULLFORM OF CPU'
+qry107="INSERT INTO comments VALUES('AN AIR BUBBLE IN WATER WILL ACT LIKE A(CONCAVE LENS,CONVEX LENS)'
+qry108="INSERT INTO comments VALUES('AN AIR BUBBLE IN WATER WILL ACT LIKE A(CONCAVE LENS,CONVEX LENS)'
+qry109="INSERT INTO comments VALUES('WHO IS KNOWN AS FATHER OF CHEMISTRY'
+qry110="INSERT INTO comments VALUES('WHO IS KNOWN AS FATHER OF CHEMISTRY'
+qry111="INSERT INTO comments VALUES('WHAT IS THE NEXT 2 PRIME NUMBERS AFTER 5'
+qry112="INSERT INTO comments VALUES('WHAT IS THE NEXT 2 PRIME NUMBERS AFTER 5'
+qry113="INSERT INTO comments VALUES('THREE IDENTICAL CUBES OF SIDES 7 CM ARE JOINED END TO END THEN WHAT IS THE VOLUME OF CUBOID'
+qry114="INSERT INTO comments VALUES('THREE IDENTICAL CUBES OF SIDES 7 CM ARE JOINED END TO END THEN WHAT IS THE VOLUME OF CUBOID'
+qry115="INSERT INTO comments VALUES('THE ABBREVIATION BPS STANDS FOR'
+qry116="INSERT INTO comments VALUES('THE ABBREVIATION BPS STANDS FOR'
+qry117="INSERT INTO comments VALUES('THE SPEED OF LIGHT WILL BE MINIMUM WHILE PASSING THROUGH(WATER,GAS,GLASS)'
+qry118="INSERT INTO comments VALUES('THE SPEED OF LIGHT WILL BE MINIMUM WHILE PASSING THROUGH(WATER,GAS,GLASS)'
+qry119="INSERT INTO comments VALUES('WHO WAS THE FIRST WOMEN PRIME MINISTER OF INDIA'
+qry120="INSERT INTO comments VALUES('WHO WAS THE FIRST WOMEN PRIME MINISTER OF INDIA'
+qry121="INSERT INTO comments VALUES('THE TERM USED TO REFER TO HORIZONTAL PAGE ORIENTATION'
+qry122="INSERT INTO comments VALUES('THE TERM USED TO REFER TO HORIZONTAL PAGE ORIENTATION'
+qry123="INSERT INTO comments VALUES('PROCESS IN WHICH ACIDS AND BASES REACT TO FORM SALTS AND WATER '
+qry124="INSERT INTO comments VALUES('PROCESS IN WHICH ACIDS AND BASES REACT TO FORM SALTS AND WATER '
+qry125="INSERT INTO comments VALUES('THE VOLUME OF LARGEST RIGHT CIRCULAR CONE THAT CAN BE CUT OUT FROM A CUBE OF EDGE 4.2 CM IS ......'
+qry126="INSERT INTO comments VALUES('THE VOLUME OF LARGEST RIGHT CIRCULAR CONE THAT CAN BE CUT OUT FROM A CUBE OF EDGE 4.2 CM IS ......'
+qry127="INSERT INTO comments VALUES('THE VOLUME OF LARGEST RIGHT CIRCULAR CONE THAT CAN BE CUT OUT FROM A CUBE OF EDGE 4.2 CM IS ......'
+qry128="INSERT INTO comments VALUES('UNIT OF POWER'
+qry129="INSERT INTO comments VALUES('UNIT OF POWER'
+qry130="INSERT INTO comments VALUES('WHO WROTE THE INDIAN NATIONAL ANTHEM'
+qry131="INSERT INTO comments VALUES('WHO WROTE THE INDIAN NATIONAL ANTHEM'
+qry132="INSERT INTO comments VALUES('WHO WROTE THE INDIAN NATIONAL ANTHEM'
+crs.execute(qry91)
+crs.execute(qry92)
+crs.execute(qry93)
+crs.execute(qry94)
+crs.execute(qry95)
+crs.execute(qry96)
+crs.execute(qry97)
+crs.execute(qry98)
+crs.execute(qry99)
+crs.execute(qry100)
+crs.execute(qry101)
+crs.execute(qry102)
+crs.execute(qry103)
+crs.execute(qry104)
+crs.execute(qry105)
+crs.execute(qry106)
+crs.execute(qry107)
+crs.execute(qry108)
+crs.execute(qry109)
+crs.execute(qry110)
+crs.execute(qry111)
+crs.execute(qry112)
+crs.execute(qry113)
+crs.execute(qry114)
+crs.execute(qry115)
+crs.execute(qry116)
+crs.execute(qry117)
+crs.execute(qry118)
+crs.execute(qry119)
+crs.execute(qry120)
+crs.execute(qry121)
+crs.execute(qry122)
+crs.execute(qry123)
+crs.execute(qry124)
+crs.execute(qry125)
+crs.execute(qry126)
+crs.execute(qry127)
+crs.execute(qry128)
+crs.execute(qry129)
+crs.execute(qry130)
+crs.execute(qry131)
+crs.execute(qry132)
+
 
 
 mydb.commit()
