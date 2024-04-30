@@ -8,18 +8,18 @@ qry01="CREATE DATABASE if not exists blog"
 crs.execute(qry01)
 qry02="USE blog "
 crs.execute(qry02)
-qry03="CREATE TABLE if not exists Profile (id_profile int(10),Username varchar(25),Email varchar(25),Followers int(4),Following int(4),Owned_Posts int(20),Comments int(5));"
+qry03="CREATE TABLE if not exists Profile (id_profile int(10) primary key,Username varchar(25),Email varchar(25),Followers int(4),Following int(4),Owned_Posts int(20),Comments int(5));"
 crs.execute(qry03)
-qry31="INSERT INTO Profile   VALUES(0001,'AleXa','alx21@gmail.com',10,2,5,2)"
-qry32="INSERT INTO  Profile   VALUES  (0002,'Ram','ram00@gmail.com',4,2,0,5)"  
-qry33="INSERT INTO Profile   VALUES (0003,'Rony','rony@gmail.com',3,3,1,4)  "
-qry34="INSERT INTO Profile    VALUES   (0004,'Anna','anna@gmail.com',7,5,2,3)"  
+qry31="INSERT INTO Profile   VALUES(0001,'AleXa','alx21@gmail.com',10,2,5,10)"
+qry32="INSERT INTO  Profile   VALUES(0002,'Ram','ram00@gmail.com',4,2,1,2)"  
+qry33="INSERT INTO Profile   VALUES (0003,'Rony','rony@gmail.com',3,3,1,2)  "
+qry34="INSERT INTO Profile    VALUES (0004,'Anna','anna@gmail.com',7,5,2,4)"  
 qry35="INSERT INTO Profile  VALUES(0005,'Lovera','ralov@gmail.com',0,4,0,0)  "
-qry36="INSERT INTO Profile  VALUES   (0006,'Andrea','32and@gmail.com',3,8,0,2)"  
-qry37="INSERT INTO Profile    VALUES (0007,'Mark','marklop@gmail.com',5,2,3,0)"
-qry38="INSERT INTO Profile    VALUES (0008,'Sandra','zandra@gmail.com',0,3,4,1)"  
-qry39="INSERT INTO Profile    VALUES (0009,'Carlos','losandrew@gmail.com',1,1,2,5)"
-qry40="INSERT INTO Profile    VALUES (0010,'Mike','mikelonch@gmail.com',5,4,1,0)  "
+qry36="INSERT INTO Profile  VALUES (0006,'Andrea','32and@gmail.com',3,8,1,2)"  
+qry37="INSERT INTO Profile    VALUES(0007,'Mark','marklop@gmail.com',5,2,3,6)"
+qry38="INSERT INTO Profile    VALUES(0008,'Sandra','zandra@gmail.com',0,3,4,8)"  
+qry39="INSERT INTO Profile    VALUES(0009,'Carlos','losandrew@gmail.com',1,1,2,5)"
+qry40="INSERT INTO Profile    VALUES(0010,'Mike','mikelonch@gmail.com',5,4,1,3)  "
 crs.execute(qry31)
 crs.execute(qry32)
 crs.execute(qry33)
@@ -31,18 +31,56 @@ crs.execute(qry38)
 crs.execute(qry39)
 crs.execute(qry40)
 
-qry04="CREATE TABLE IF NOT EXISTS qns_ans(question varchar(50), answer varchar(25));"
-crs.excute(qry04)
-qry41="INSERT INTO qns_ans VALUES ('Factors of 20','5 4 ')"
-crs.execute(qry41)
 
-qry05="CREATE TABLE IF NOT EXITS categories (category varchar(20));"
-crs.execute(qry05)
-qry51="INSERT INTO categories VALUES('maths')"
+
+qry05="CREATE TABLE IF NOT EXISTS qns_ans(id_profile int(10) ,Categories varchar(15) check(categories='MATHS' or categories='PHYSICS' or categories='CHEMISTRY' or categories='HISTORY' or categories='COMPUTER' ),question varchar(50),foreign key(id_profile) references Profile(id_profile));"
+crs.excute(qry05)
+qry51="INSERT INTO qns_ans VALUES (0001,'MATHS','FACTORS OF 196')"
+qry52="INSERT INTO qns_ans VALUES (0001,'PHYSICS','WORKING PRINCIPLE OF A WASHING MACHINE')"
+qry53="INSERT INTO qns_ans VALUES (0001,'COMPUTER','WHO IS THE FATHER OF COMPUTER')"
+qry54="INSERT INTO qns_ans VALUES (0001,'CHEMISTRY','SOLUBILITY OF ALCOHOL IN WATER IS DUE TO')"
+qry55="INSERT INTO qns_ans VALUES (0001,'HISTORY','WHO WAS THE FIRST EMPEROR OF THE MAURYA DYNASTY IN INDIA')"
+qry56="INSERT INTO qns_ans VALUES (0002,'MATHS','20+(90/2) IS EQUAL TO')"
+qry57="INSERT INTO qns_ans VALUES (0003,'HISTORY','WHO IS KNOWN AS THE FATHER OF THE INDIAN CONSTITUTION')"
+qry58="INSERT INTO qns_ans VALUES (0004,'COMPUTER','WHAT IS THE FULLFORM OF CPU')"
+qry59="INSERT INTO qns_ans VALUES (0004,'PHYSICS','AN AIR BUBBLE IN WATER WILL ACT LIKE A(CONCAVE LENS,CONVEX LENS)')"
+qry60="INSERT INTO qns_ans VALUES (0006,'CHEMISTRY','WHO IS KNOWN AS FATHER OF CHEMISTRY')"
+qry61="INSERT INTO qns_ans VALUES (0007,'MATHS','WHAT IS THE NEXT 2 PRIME NUMBERS AFTER 5')"
+qry62="INSERT INTO qns_ans VALUES (0007,'MATHS','THREE IDENTICAL CUBES OF SIDES 7 CM ARE JOINED END TO END THEN WHAT IS THE VOLUME OF CUBOID')"
+qry63="INSERT INTO qns_ans VALUES (0007,'COMPUTER','THE ABBREVIATION BPS STANDS FOR')"
+qry64="INSERT INTO qns_ans VALUES (0008,'PHYSICS','THE SPEED OF LIGHT WILL BE MINIMUM WHILE PASSING THROUGH(WATER,GAS,GLASS)')"
+qry65="INSERT INTO qns_ans VALUES (0008,'HISTORY','WHO WAS THE FIRST WOMEN PRIME MINISTER OF INDIA')"
+qry66="INSERT INTO qns_ans VALUES (0008,'COMPUTER','THE TERM USED TO REFER TO HORIZONTAL PAGE ORIENTATION')"
+qry67="INSERT INTO qns_ans VALUES (0008,'CHEMISTRY','PROCESS IN WHICH ACIDS AND BASES REACT TO FORM SALTS AND WATER ' )"
+qry68="INSERT INTO qns_ans VALUES (0009,'MATHS','THE VOLUME OF LARGEST RIGHT CIRCULAR CONE THAT CAN BE CUT OUT FROM A CUBE OF EDGE 4.2 CM IS ......')"
+qry69="INSERT INTO qns_ans VALUES (0009,'PHYSICS','UNIT OF POWER')"
+qry70="INSERT INTO qns_ans VALUES (0010,'HISTORY','WHO WROTE THE INDIAN NATIONAL ANTHEM')"
 crs.execute(qry51)
+crs.execute(qry52)
+crs.execute(qry53)
+crs.execute(qry54)
+crs.execute(qry55)
+crs.execute(qry56)
+crs.execute(qry57)
+crs.execute(qry58)
+crs.execute(qry59)
+crs.execute(qry60)
+crs.execute(qry61)
+crs.execute(qry62)
+crs.execute(qry63)
+crs.execute(qry64)
+crs.execute(qry65)
+crs.execute(qry66)
+crs.execute(qry67)
+crs.execute(qry68)
+crs.execute(qry69)
+crs.execute(qry70)
 
-qry06=("CREATE TABLE IF NOT EXISTS commands(command varchar(20));"
-crs.execute(qry06)
+
+
+
+qry09=("CREATE TABLE IF NOT EXISTS comments(question varchar(50), comment varchar(20));"
+crs.execute(qry09)
 # insert values to the table
 
 
@@ -82,7 +120,7 @@ while True:
        elif a4==2:
           profilemng()
        elif a4==3:
-          commandmng()
+          commentmng()
        else:
           print(" enter valid choice ")
     #add a loof that will  break of we enter the choice wrong for 4 times
@@ -111,9 +149,9 @@ while True:
       # can change any datas related to the profile
       print (" to manage profile")
 
-   def commandmng():
+   def commentmng():
       # retrieve data from the table profile and qns_ans
-      print("command")
+      print("comment")
 
    def create():
       # table qns_ans
