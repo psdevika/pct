@@ -248,8 +248,12 @@ while True:
        c_email=input(" enter the email")
        c_category=input("select your category from MATHS PHYSICS CHEMISTRY COMPUTER HISTORY ")
        c_blog=input(" Create your blog here")
-       qry150="INSERT INTO Profile
-       qry151="INSERT INTO qns_ans
+       qry150="INSERT INTO Profile (id_profile,Username,Email) VALUES({},{},{})".format(c_id,c_name,c_email)
+       qry151="INSERT INTO qns_ans (id_profile,Categories,question) VALUES({},{},{})".format(c_id,c_category,c_blog)
+
+
+
+
    def read():
        # table categories and  qns_ans
        # to read blogs
