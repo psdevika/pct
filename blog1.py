@@ -232,12 +232,24 @@ while True:
 
 
    def create():
+       import mysql.connector as msc
+       mydb = msc.connect(host="localhost",
+                   user="root",
+                   password="root",
+                   database="blog",
+                   allow_local_infile=True)
+      
        # table qns_ans
        # to add blogs
        # can update upload or delete owned post
        print("to create blogs")
-
-
+       c_id=int(input("enter your id "))
+       c_name=input("enter the user name")
+       c_email=input(" enter the email")
+       c_category=input("select your category from MATHS PHYSICS CHEMISTRY COMPUTER HISTORY ")
+       c_blog=input(" Create your blog here")
+       qry150="INSERT INTO Profile
+       qry151="INSERT INTO qns_ans
    def read():
        # table categories and  qns_ans
        # to read blogs
